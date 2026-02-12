@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雅思作文评分 - Koma语言学习站</title>
+    <link rel="stylesheet" href="grading-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="grading-navbar">
+        <div class="nav-container">
+            <a href="home.html" class="back-link">← 返回首页</a>
+            <div class="nav-title">雅思作文评分</div>
+        </div>
+    </nav>
+
+    <div class="grading-container">
+        <!-- 左栏：表单操作区 -->
+        <div class="left-panel">
+            <div class="form-section">
+                <h2 class="section-title">评分</h2>
+                
+                <!-- 题目类型 -->
+                <div class="form-group">
+                    <label class="form-label">题目类型</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="taskType" value="task1" id="task1">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Task 1</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="taskType" value="task2" id="task2">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Task 2</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 题目文本 -->
+                <div class="form-group">
+                    <label class="form-label">题目文本</label>
+                    <div class="input-with-button">
+                        <textarea 
+                            class="form-textarea" 
+                            placeholder="请输入题目文本"
+                            id="questionText"
+                            rows="4"
+                        ></textarea>
+                        <button class="photo-btn" type="button">
+                            <span class="btn-icon">📷</span>
+                            拍照识别文本
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 题目图表 -->
+                <div class="form-group">
+                    <label class="form-label">题目图表</label>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <div class="upload-icon">📊</div>
+                            <p class="upload-text">点击、拖拽、粘贴</p>
+                            <p class="upload-hint">（折线图、柱状图、地图...）</p>
+                        </div>
+                        <input type="file" id="chartUpload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- 你的答案 -->
+                <div class="form-group">
+                    <label class="form-label">你的答案</label>
+                    <div class="input-with-button">
+                        <textarea 
+                            class="form-textarea answer-textarea" 
+                            placeholder="请输入你的答案"
+                            id="answerText"
+                            rows="8"
+                        ></textarea>
+                        <button class="photo-btn" type="button">
+                            <span class="btn-icon">📷</span>
+                            拍照识别文本
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右栏：评分展示面板 -->
+        <div class="right-panel">
+            <div class="scoring-section">
+                <!-- 总体评分 -->
+                <div class="overall-score">
+                    <div class="score-display">
+                        <span class="score-number" id="overallScore">0.0</span>
+                        <span class="score-total">/ 9.0</span>
+                    </div>
+                    <div class="score-label">总体评分</div>
+                </div>
+
+                <!-- 评分维度标签页 -->
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="overview">概览</button>
+                        <button class="tab-btn" data-tab="task-response">任务回应</button>
+                        <button class="tab-btn" data-tab="coherence">连贯衔接</button>
+                        <button class="tab-btn" data-tab="grammar">语法使用</button>
+                        <button class="tab-btn" data-tab="vocabulary">词汇使用</button>
+                    </div>
+                </div>
+
+                <!-- 评分内容区域 -->
+                <div class="tab-content">
+                    <!-- 概览标签页 -->
+                    <div class="tab-panel active" id="overview-panel">
+                        <div class="score-breakdown">
+                            <div class="score-item">
+                                <span class="score-name">任务回应</span>
+                                <div class="score-bar">
+                                    <div class="score-fill" data-score="0"></div>
+                                </div>
+                                <span class="score-value">0.0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-name">连贯衔接</span>
+                                <div class="score-bar">
+                                    <div class="score-fill" data-score="0"></div>
+                                </div>
+                                <span class="score-value">0.0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-name">语法使用</span>
+                                <div class="score-bar">
+                                    <div class="score-fill" data-score="0"></div>
+                                </div>
+                                <span class="score-value">0.0</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-name">词汇使用</span>
+                                <div class="score-bar">
+                                    <div class="score-fill" data-score="0"></div>
+                                </div>
+                                <span class="score-value">0.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 其他标签页内容 -->
+                    <div class="tab-panel" id="task-response-panel">
+                        <div class="detail-content">
+                            <h4>任务回应评分标准</h4>
+                            <p>评估你是否完全回答了题目要求，观点是否清晰，论证是否充分。</p>
+                            <div class="criteria-list">
+                                <div class="criteria-item">
+                                    <span class="criteria-label">完全回应题目</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">观点清晰</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">论证充分</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="coherence-panel">
+                        <div class="detail-content">
+                            <h4>连贯衔接评分标准</h4>
+                            <p>评估文章结构是否清晰，段落间连接是否自然，逻辑是否连贯。</p>
+                            <div class="criteria-list">
+                                <div class="criteria-item">
+                                    <span class="criteria-label">文章结构</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">段落连接</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">逻辑连贯</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="grammar-panel">
+                        <div class="detail-content">
+                            <h4>语法使用评分标准</h4>
+                            <p>评估语法准确性、句式多样性和语法复杂度。</p>
+                            <div class="criteria-list">
+                                <div class="criteria-item">
+                                    <span class="criteria-label">语法准确性</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">句式多样性</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">语法复杂度</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="vocabulary-panel">
+                        <div class="detail-content">
+                            <h4>词汇使用评分标准</h4>
+                            <p>评估词汇准确性、丰富性和恰当性。</p>
+                            <div class="criteria-list">
+                                <div class="criteria-item">
+                                    <span class="criteria-label">词汇准确性</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">词汇丰富性</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                                <div class="criteria-item">
+                                    <span class="criteria-label">词汇恰当性</span>
+                                    <div class="criteria-score">0.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 开始评分按钮 -->
+                <button class="start-grading-btn" id="startGradingBtn" disabled>
+                    <span class="btn-icon">✓</span>
+                    开始评分
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="grading-script.js"></script>
+</body>
+</html>

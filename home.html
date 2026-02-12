@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - Koma语言学习站</title>
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="home-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="back-link">← 返回主页</a>
+            <div class="nav-title">作文批改平台</div>
+        </div>
+    </nav>
+
+    <div class="home-container">
+        <!-- 主要内容区域 -->
+        <div class="main-content">
+            <!-- 左侧内容 -->
+            <div class="content-left">
+                <!-- 欢迎语 -->
+                <div class="welcome-section">
+                    <h1 class="welcome-text" id="welcomeText">欢迎回来，<span class="username">用户</span>!</h1>
+                </div>
+
+                <!-- 核心标语 -->
+                <div class="slogan-section">
+                    <h2 class="main-slogan">即刻反馈，立马提升</h2>
+                    <p class="slogan-subtitle">专业的雅思作文AI评分系统，助您快速提升写作水平</p>
+                </div>
+
+                <!-- 行动按钮 -->
+                <div class="action-buttons">
+                    <a href="grading.html" class="btn-primary">
+                        <span class="btn-icon">✓</span>
+                        开始评分
+                    </a>
+                    <a href="history.html" class="btn-history">
+                        <span class="btn-icon">📊</span>
+                        历史评分
+                    </a>
+                    <button class="btn-secondary" id="upgradeBtn">
+                        <span class="btn-icon">👑</span>
+                        已升级
+                    </button>
+                </div>
+
+                <!-- 功能特色 -->
+                <div class="features-preview">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">精准评分</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span class="feature-text">即时反馈</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span class="feature-text">详细分析</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧插图 -->
+            <div class="content-right">
+                <div class="illustration-container">
+                    <div class="main-illustration">
+                        <!-- 人物和学习元素 -->
+                        <div class="person-figure">
+                            <div class="head">👤</div>
+                            <div class="body">👕</div>
+                        </div>
+                        
+                        <!-- 电脑和学习图标 -->
+                        <div class="laptop">
+                            <div class="screen">💻</div>
+                            <div class="keyboard"></div>
+                        </div>
+                        
+                        <!-- 浮动学习元素 -->
+                        <div class="floating-elements">
+                            <div class="element element-1">📝</div>
+                            <div class="element element-2">📚</div>
+                            <div class="element element-3">🎓</div>
+                            <div class="element element-4">⭐</div>
+                        </div>
+                        
+                        <!-- 背景装饰 -->
+                        <div class="bg-decoration">
+                            <div class="circle circle-1"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 快速统计 -->
+        <div class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">已评分作文</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">用户满意度</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">在线服务</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 使用提示 -->
+        <div class="tips-section">
+            <div class="tips-container">
+                <h3 class="tips-title">使用提示</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">📝</div>
+                        <h4>选择任务类型</h4>
+                        <p>根据您的需求选择Task 1或Task 2进行评分</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">📊</div>
+                        <h4>上传题目和答案</h4>
+                        <p>输入题目文本和您的作文答案，支持图片识别</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">📈</div>
+                        <h4>查看详细报告</h4>
+                        <p>获得各维度评分和改进建议，持续提升</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="home-script.js"></script>
+</body>
+</html>

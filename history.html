@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史评分 - Koma语言学习站</title>
+    <link rel="stylesheet" href="history-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="history-navbar">
+        <div class="nav-container">
+            <a href="home.html" class="back-link">← 返回首页</a>
+            <div class="nav-title">历史评分</div>
+        </div>
+    </nav>
+
+    <div class="history-container">
+        <!-- 顶部筛选和搜索区域 -->
+        <div class="filter-section">
+            <div class="filter-container">
+                <h1 class="page-title">历史评分</h1>
+                
+                <div class="filter-controls">
+                    <!-- 筛选标签 -->
+                    <div class="filter-tabs">
+                        <button class="tab-btn active" data-filter="all">全部</button>
+                        <button class="tab-btn" data-filter="task1">Task 1</button>
+                        <button class="tab-btn" data-filter="task2">Task 2</button>
+                    </div>
+                    
+                    <!-- 搜索框 -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" placeholder="搜索所有历史评分" id="searchInput">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 历史卡片列表 -->
+        <div class="cards-section">
+            <div class="cards-container">
+                <!-- 历史评分卡片 -->
+                <div class="history-card" data-task="task2" data-date="2025-01-15">
+                    <div class="card-header">
+                        <span class="task-type">Task 2</span>
+                        <span class="score">6.0 ⭐</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="question-text">Some people think that the main aim of science should be to improve people's lives. Others believe that science should be pursued for its own sake. Discuss both views and give your own opinion. Scientific developments are occurring at a great rate but some of them do not seem to be of help...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="grading-date">2025-01-15</span>
+                    </div>
+                </div>
+
+                <div class="history-card" data-task="task2" data-date="2025-01-14">
+                    <div class="card-header">
+                        <span class="task-type">Task 2</span>
+                        <span class="score">6.0 ⭐</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="question-text">Some people think that competition is good in work, school and everyday life, while others believe that it can be harmful. Discuss both views and give your own opinion. In my opinion competition at work, at school and in daily life can both be a good thing and a bad...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="grading-date">2025-01-14</span>
+                    </div>
+                </div>
+
+                <div class="history-card demo" data-task="task2" data-date="2025-01-13">
+                    <div class="card-header">
+                        <span class="task-type demo">Task 2 Demo</span>
+                        <span class="score">6.0 ⭐</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="question-text">"Children who are brought up in families that do not have large amounts of money are better prepared to deal with the problems of adult life than children brought up by wealthy parents." "I greatly support the idea about Children who are brought up in families who do not have large amounts of money are better prepared to deal with the problems of adult life than children brought up by wealthy parents..."</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="grading-date">2025-01-13</span>
+                    </div>
+                </div>
+
+                <div class="history-card demo" data-task="task1" data-date="2025-01-12">
+                    <div class="card-header">
+                        <span class="task-type demo">Task 1 Demo</span>
+                        <span class="score">5.0 ⭐</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="question-text">The graph below shows radio and television audiences throughout the day in 1992. The graph shows the percentage of audiences for radio and television throughout the day in 1992. It is clear that radio and television had different patterns of audience engagement...</p>
+                        <div class="chart-preview">
+                            <div class="mini-chart">📊</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="grading-date">2025-01-12</span>
+                    </div>
+                </div>
+
+                <div class="history-card" data-task="task1" data-date="2025-01-11">
+                    <div class="card-header">
+                        <span class="task-type">Task 1</span>
+                        <span class="score">7.0 ⭐</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="question-text">The chart below shows the percentage of households in owned and rented accommodation in England and Wales between 1918 and 2011. The bar chart illustrates the proportion of households living in owned and rented accommodation in England and Wales over a period of nearly a century...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="grading-date">2025-01-11</span>
+                    </div>
+                </div>
+
+                <div class="history-card" data-task="task2" data-date="2025-01-10">
+                    <div class="card-header">
+                        <span class="task-type">Task 2</span>
+                        <span class="score">6.5 ⭐</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="question-text">Many people believe that social networking sites have had a huge negative impact on both individuals and society. To what extent do you agree? Social networking sites have become an integral part of modern life, connecting people across the globe and providing platforms for communication...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="grading-date">2025-01-10</span>
+                    </div>
+                </div>
+
+                <!-- 空状态提示 -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-icon">📝</div>
+                    <h3>暂无评分记录</h3>
+                    <p>开始您的第一次作文评分吧！</p>
+                    <a href="grading.html" class="start-grading-link">开始评分</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="history-script.js"></script>
+</body>
+</html>
